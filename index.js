@@ -7,7 +7,7 @@ app.use(express.json());
 app.post("/functions/markdownToHTML", async (req, res) => {
   const { input } = req.body;
 
-  if (!input) {
+  if (!input || typeof input !== string) {
     return res.status(400).send({ error: "Input is required" });
   }
 
