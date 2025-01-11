@@ -1,5 +1,5 @@
-const express = require("express");
-const marked = require("marked");
+import express from "express";
+import { marked } from "marked";
 
 const app = express();
 app.use(express.json());
